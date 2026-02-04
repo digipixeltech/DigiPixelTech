@@ -1,6 +1,5 @@
 import { useState } from "react";
 import logo from "../img/Logo/dpt-logo.png";
-import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
