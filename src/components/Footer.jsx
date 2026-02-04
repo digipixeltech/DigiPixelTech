@@ -48,7 +48,7 @@ const Footer = () => {
             />
           </a>
           <a
-            href="mailto:digipixeltech43@gmail.com"
+            href="mailto:Digipixeltechsolution@gmail.com"
             className="p-3 hover:bg-white rounded-full hover:text-orange-500"
           >
             <Mail size={30} strokeWidth={1.25} className="" />
