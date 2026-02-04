@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.contact{
+    background: url('img/Logo/contact.png');
+}

@@ -1,7 +1,5 @@
 import { useState } from "react";
 import logo from "../img/Logo/dpt-logo.png";
-import { Link } from "react-router-dom";
-
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -18,10 +16,10 @@ const Navbar = () => {
 			</div>
 			<ul className="hidden md:flex gap-6 font-medium">
 				<li className="cursor-pointer hover:text-purple-500 transition-colors">
-					<a href="pages/Home.jsx">Home</a>
+					<a href="../pages/Home.jsx">Home</a>
 				</li>
 				<li className="cursor-pointer hover:text-purple-500 transition-colors">
-					<a href="pages/Services.jsx">Services</a>
+					<a href="../pages/Services.jsx">Services</a>
 				</li>
 				<li className="cursor-pointer hover:text-purple-500 transition-colors">
 					<a href="pages/Projects.jsx">Projects</a>
@@ -30,12 +28,12 @@ const Navbar = () => {
 					<a href="pages/About.jsx">About</a>
 				</li>
 				<li className="cursor-pointer hover:text-purple-500 transition-colors">
-					<a href="pages/Contact.jsx">Contact</a>
+					<a href="../pages/Contact.jsx">Contact</a>
 				</li>
 			</ul>
 			{/* Mobile menu button */}
 			<button
-				className="md:hidden p-2 rounded-md  focus:outline-none hover:bg-black"
+				className="md:hidden p-2 rounded-md  focus:outline-none hover:bg-black cursor-pointer"
 				onClick={() => setIsOpen(!isOpen)}
 				aria-label={isOpen ? "Close menu" : "Open menu"}
 			>
@@ -75,9 +73,9 @@ const Navbar = () => {
 			</button>
 			{/* Mobile menu panel */}
 			{isOpen && (
-				<ul className="md:hidden absolute right-4 top-full mt-2 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-4 flex flex-col gap-2">
+				<ul className="md:hidden absolute right-4 top-full mt-2 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-4 flex flex-col gap-2 z-50">
 					<li className="cursor-pointer  hover:text-purple-500 transition-colors">
-						Homes
+						Home
 					</li>
 					<li className="cursor-pointer hover:text-purple-500 transition-colors">
 						Services
