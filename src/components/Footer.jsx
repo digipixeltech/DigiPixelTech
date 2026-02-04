@@ -18,14 +18,14 @@ const Footer = () => {
         </div>
         <div className="w-1/3 flex gap-20">
           <div>
-            <h3>Services</h3>
+            <h3 className="text-xl">Services</h3>
             <p>hh</p>
             <p>jjj</p>
             <p>jjjkk</p>
             <p>kk</p>
           </div>
-          <div>
-            <h3>Others</h3>
+          <div className="list-none">
+            <h3 className="text-xl">Others</h3>
             <li><a href="">Home</a></li>
             <li><a href="">Services</a></li>
             <li><a href="">Projects</a></li>
@@ -36,29 +36,28 @@ const Footer = () => {
         <div className="flex flex-col justify-center">
           <a
             href="https://www.instagram.com/digipixeltech/"
-            className="decoration-0 p-3 rounded-full hover:bg-white"
+            className="decoration-0 p-3 rounded-full hover:bg-white hover:shadow hover:shadow-white hover:text-pink-500"
           >
-            <Instagram size={30} className="hover:text-pink-500" />
+            <Instagram size={30} className=" " />
           </a>
-          <a href="" className="p-3 hover:bg-white rounded-full">
+          <a href="" className="p-3 hover:bg-white rounded-full hover:text-blue-700">
             <Linkedin
               size={30}
-              color="#9d3969"
               strokeWidth={1.25}
-              className="hover:text-blue-500"
+              className=""
             />
           </a>
           <a
             href="mailto:digipixeltech43@gmail.com"
-            className="p-3 bg-black rounded-full"
+            className="p-3 hover:bg-white rounded-full hover:text-orange-500"
           >
-            <Mail size={30} color="#9d3969" strokeWidth={1.25} />
+            <Mail size={30} strokeWidth={1.25} className="" />
           </a>
           <a
             href="https://wa.me/917411712661"
-            className="p-3 bg-black rounded-full"
+            className="p-3 rounded-full hover:bg-white hover:text-green-400"
           >
-            <Whatsapp size={30} />{" "}
+            <Whatsapp size={30} className=""/>
           </a>
         </div>
       </footer>
