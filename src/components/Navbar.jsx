@@ -4,7 +4,7 @@ import logo from "../img/Logo/dpt-logo.png";
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<nav className="relative flex justify-between items-center px-6 py-4 shadow-md ">
+		<nav className="relative flex justify-between items-center px-6 py-2 shadow-md ">
 			<div className="flex items-center gap-2 p-2 rounded-lg shadow-md ">
 				<img
 					id="logo"
@@ -14,23 +14,40 @@ const Navbar = () => {
 				/>
 				<h1 className="text-xl font-bold text-purple-600">DigiPixelTech</h1>
 			</div>
-			<ul className="hidden md:flex gap-6 font-medium">
-				<li className="cursor-pointer  hover:text-purple-500 transition-colors">
-					<a href="pages/Home.jsx">Home</a>
-				</li>
-				<li className="cursor-pointer  hover:text-purple-500 transition-colors">
-					<a href="pages/Services.jsx">Services</a>
-				</li>
-				<li className="cursor-pointer  hover:text-purple-500 transition-colors">
-					<a href="pages/Projects.jsx">Projects</a>
-				</li>
-				<li className="cursor-pointer  hover:text-purple-500 transition-colors">
-					<a href="pages/About.jsx">About</a>
-				</li>
-				<li className="cursor-pointer  hover:text-purple-500 transition-colors">
-					<a href="pages/Contact.jsx">Contact</a>
-				</li>
-			</ul>
+			<div className="hidden md:flex gap-6 font-medium">
+				<a
+					className="cursor-pointer  hover:text-purple-500 transition-colors"
+					href="pages/Home.jsx"
+				>
+					Home
+				</a>
+
+				<a
+					className="cursor-pointer  hover:text-purple-500 transition-colors"
+					href="pages/Services.jsx"
+				>
+					Services
+				</a>
+
+				<a
+					className="cursor-pointer  hover:text-purple-500 transition-colors"
+					href="pages/Projects.jsx"
+				>
+					Projects
+				</a>
+				<a
+					className="cursor-pointer  hover:text-purple-500 transition-colors"
+					href="pages/About.jsx"
+				>
+					About
+				</a>
+				<a
+					className="cursor-pointer  hover:text-purple-500 transition-colors"
+					href="pages/Contact.jsx"
+				>
+					Contact
+				</a>
+			</div>
 			{/* Mobile menu button */}
 			<button
 				className="md:hidden p-2 rounded-md  focus:outline-none hover:bg-black"
@@ -73,20 +90,38 @@ const Navbar = () => {
 			</button>
 			{/* Mobile menu panel */}
 			{isOpen && (
-				<ul className="md:hidden absolute right-4 top-full mt-1 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-2 flex flex-col gap-2">
-					<li className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors">
+				<div className="md:hidden absolute right-4 top-full mt-1 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-2 flex flex-col gap-2">
+					<a
+						href="/"
+						className="transition-discrete cursor-pointer rounded text-center p-2 hover:text-black hover:bg-purple-500 transition-colors"
+					>
 						Homes
-					</li>
-					<li className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors">
+					</a>
+					<a
+						href="/services"
+						className="transition-discrete cursor-pointer rounded text-center p-2 hover:text-black hover:bg-purple-500 transition-colors"
+					>
 						Services
-					</li>
-					<li className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors">
+					</a>
+					<a
+						href="/projects"
+						className="transition-discrete cursor-pointer rounded text-center p-2 hover:text-black hover:bg-purple-500 transition-colors"
+					>
+						Projects
+					</a>
+					<a
+						href="/about"
+						className="transition-discrete cursor-pointer rounded text-center p-2 hover:text-black hover:bg-purple-500 transition-colors"
+					>
 						About
-					</li>
-					<li className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors">
+					</a>
+					<a
+						href="/contact"
+						className="transition-discrete cursor-pointer rounded text-center p-2 hover:text-black hover:bg-purple-500 transition-colors"
+					>
 						Contact
-					</li>
-				</ul>
+					</a>
+				</div>
 			)}{" "}
 		</nav>
 	);
