@@ -16,16 +16,19 @@ const Navbar = () => {
 			</div>
 			<ul className="hidden md:flex gap-6 font-medium">
 				<li className="cursor-pointer hover:text-purple-500 transition-colors">
-					Home
+					<a href="pages/Home.jsx">Home</a>
 				</li>
 				<li className="cursor-pointer hover:text-purple-500 transition-colors">
-					Services
+					<a href="pages/Services.jsx">Services</a>
 				</li>
 				<li className="cursor-pointer hover:text-purple-500 transition-colors">
-					About
+					<a href="pages/Projects.jsx">Projects</a>
 				</li>
 				<li className="cursor-pointer hover:text-purple-500 transition-colors">
-					Contact
+					<a href="pages/About.jsx">About</a>
+				</li>
+				<li className="cursor-pointer hover:text-purple-500 transition-colors">
+					<a href="pages/Contact.jsx">Contact</a>
 				</li>
 			</ul>
 			{/* Mobile menu button */}
