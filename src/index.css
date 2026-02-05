@@ -96,8 +96,20 @@
    left: 50%;
    transform: translate(-50%, -50%);
    animation: float 6s ease-in-out infinite, tilt 6s ease-in-out infinite;
+}
 
-   .contact {
-      background: url('img/Logo/contact.png');
-   }
+.contact {
+   background: url('img/banner/contact.png');
+}
+
+.iframe{
+   -moz-transform: scale(0.5);
+   -webkit-transform: scale(0.5);
+   transform: scale(0.5);
+   transform-origin: top left;
+   scrollbar-width: none;
+}
+
+iframe::-webkit-scrollbar{
+   display: none;
 }

@@ -3,6 +3,7 @@ import React from "react";
 const Contact = () => {
 	return (
 		<>
+		<div className="contact w-full h-170"></div>
 			<div className=" text-white h-150 m-20 p-20 flex justify-center bg-purple-600">
 				<form
 					onSubmit={() => {}}
