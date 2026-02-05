@@ -1,9 +1,14 @@
 import { useState } from "react";
 import logo from "../img/Logo/dpt-logo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const navClass = ({ isActive }) =>
+		`pageLinks cursor-pointer rounded text-center p-2 transition-colors
+   hover:bg-purple-500 hover:text-black
+   ${isActive ? "bg-purple-500 text-black" : ""}`;
+
 	return (
 		<nav className="relative flex justify-between items-center px-6 py-4 shadow-md ">
 			<div className="flex items-center gap-2 p-2 rounded-lg shadow-md ">
@@ -16,39 +21,25 @@ const Navbar = () => {
 				<h1 className="text-xl font-bold text-purple-600">DigiPixelTech</h1>
 			</div>
 			<div className="hidden md:flex gap-6 font-medium">
-				<Link
-					className="cursor-pointer rounded text-center  hover:bg-purple-500  p-2 hover:text-black transition-colors"
-					to="/"
-				>
+				<NavLink to="/" className={navClass}>
 					Home
-				</Link>
+				</NavLink>
 
-				<Link
-					className="cursor-pointer rounded text-center  hover:bg-purple-500  p-2 hover:text-black transition-colors"
-					to="/services"
-				>
+				<NavLink to="/services" className={navClass}>
 					Services
-				</Link>
+				</NavLink>
 
-				<Link
-					className="cursor-pointer rounded text-center  hover:bg-purple-500  p-2 hover:text-black transition-colors"
-					to="/projects"
-				>
+				<NavLink to="/projects" className={navClass}>
 					Projects
-				</Link>
+				</NavLink>
 
-				<Link
-					className="cursor-pointer rounded text-center  hover:bg-purple-500  p-2 hover:text-black transition-colors"
-					to="/about"
-				>
+				<NavLink to="/about" className={navClass}>
 					About
-				</Link>
-				<Link
-					to="/contact"
-					className="cursor-pointer rounded text-center  hover:bg-purple-500 p-2  hover:text-black transition-colors"
-				>
+				</NavLink>
+
+				<NavLink to="/contact" className={navClass}>
 					Contact
-				</Link>
+				</NavLink>
 			</div>
 			{/* Mobile menu button */}
 			<button
@@ -93,36 +84,25 @@ const Navbar = () => {
 			{/* Mobile menu panel */}
 			{isOpen && (
 				<div className="md:hidden absolute right-4 top-full mt-1 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-2 flex flex-col gap-2">
-					<Link
-						to="/"
-						className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors"
-					>
-						Homes
-					</Link>
-					<Link
-						to="/services"
-						className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors"
-					>
+					<NavLink to="/" className={navClass}>
+						Home
+					</NavLink>
+
+					<NavLink to="/services" className={navClass}>
 						Services
-					</Link>
-					<Link
-						to="/projects"
-						className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors"
-					>
+					</NavLink>
+
+					<NavLink to="/projects" className={navClass}>
 						Projects
-					</Link>
-					<Link
-						to="/about"
-						className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors"
-					>
+					</NavLink>
+
+					<NavLink to="/about" className={navClass}>
 						About
-					</Link>
-					<Link
-						to="/contact"
-						className="cursor-pointer rounded text-center p-2  hover:bg-purple-500 transition-colors"
-					>
+					</NavLink>
+
+					<NavLink to="/contact" className={navClass}>
 						Contact
-					</Link>
+					</NavLink>
 				</div>
 			)}{" "}
 		</nav>
