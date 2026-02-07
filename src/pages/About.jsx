@@ -56,7 +56,7 @@ const About = (props) => {
         </p>
       </div>
       <div className="mt-20">
-        <h1 className="text-3xl flex justify-center mb-10">Meet Our Team</h1>
+        <h1 className="text-3xl flex justify-center mb-10">Our Team</h1>
         <div className="grid grid-cols-5">
           {props.teamMembers.map(function (elem) {
             return (
@@ -64,6 +64,7 @@ const About = (props) => {
                 img={elem.img}
                 Name={elem.Name}
                 Role={elem.Role}
+                Links={elem.Links}
                 desc={elem.desc}
               />
             );

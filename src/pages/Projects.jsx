@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Restaurant from "../img/Projects/Restaurant.png";
 import Mirfeez from "../img/Projects/Portfolio.Mirfeez.png";
+import Interior from "../img/Projects/interior.png";
 
 const Projects = () => {
 	const projectInfo = [
 		{
-			title: "Portfolio Website",
-			client: "Interior Designer",
+			title: "Restaurant Website",
+			client: "For College Project",
 			img: Restaurant,
-			webLink: "https://haseeb-interior.netlify.app/",
+			// webLink: "https://haseeb-interior.netlify.app/",
 			info: "lorem ipsum a;sdlkfjsdlkf slkjfsl dsklfds fdsfdskjf dsflfkdsf s, fsdkf dsfdf lfds fdskjf dsk dsvmd vdsofdsofj ddfmd ldkf dk  slfdso fj dfhas;ldfajfa;djfldsfdljf  f dsjfdslfjslf ldskf fkl l ds;afj ;sfj sldfj ldfjldsf lsjdfosdjfowejf dklfdsklf",
 		},
 		{
@@ -17,6 +18,13 @@ const Projects = () => {
 			client: "Self",
 			img: Mirfeez,
 			webLink: "https://mirfeez.github.io/Mirfeez-portfolio/",
+			info: "lorem ipsum a;sdlkfjsdlkf slkjfsl dsklfds fdsfdskjf dsflfkdsf s, fsdkf dsfdf lfds fdskjf dsk dsvmd vdsofdsofj ddfmd ldkf dk  slfdso fj dfhas;ldfajfa;djfldsfdljf  f dsjfdslfjslf ldskf fkl l ds;afj ;sfj sldfj ldfjldsf lsjdfosdjfowejf dklfdsklf",
+		},
+		{
+			title: "Interior Portfolio Website",
+			client: "Client",
+			img: Interior,
+			webLink: "https://haseeb-interior.netlify.app/",
 			info: "lorem ipsum a;sdlkfjsdlkf slkjfsl dsklfds fdsfdskjf dsflfkdsf s, fsdkf dsfdf lfds fdskjf dsk dsvmd vdsofdsofj ddfmd ldkf dk  slfdso fj dfhas;ldfajfa;djfldsfdljf  f dsjfdslfjslf ldskf fkl l ds;afj ;sfj sldfj ldfjldsf lsjdfosdjfowejf dklfdsklf",
 		},
 	];

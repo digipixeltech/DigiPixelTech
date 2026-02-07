@@ -6,8 +6,9 @@ import { Whatsapp } from "react-bootstrap-icons";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col min-h-screen m-0 ">
-      <footer className="py-10 px-10 mt-auto flex justify-around">
+    <>
+     {/* <div className="flex flex-col min-h-screen m-0 "> */}
+      <footer className="py-10 px-10 mt-25 flex justify-around">
         <div className="w-1/3 flex justify-center flex-col">
           <h2>DIGIPIXELTECH</h2>
           <p>
@@ -62,7 +63,8 @@ const Footer = () => {
         </div>
       </footer>
       <p>DigiPixelTech</p>
-    </div>
+    {/*  </div> */}
+    </>
   );
 };
 

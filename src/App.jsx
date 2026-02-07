@@ -7,39 +7,24 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Profile from "./img/Logo/profile-logo.png";
 
 export default function App() {
 
 	const teamMembers = [
 		{
-			img: "",
-			Name: "Azeem",
-			Role: "CEO",
-			desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, porro?",
-		},
-		{
-			img: "",
+			img: Profile,
 			Name: "Mirfeez",
-			Role: "CEO",
-			desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, porro?",
+			Role: "Member",
+			desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, Sapiente, porro?",
+			Links: "https://mirfeez.github.io/Mirfeez-portfolio/"
 		},
 		{
-			img: "",
-			Name: "Other",
-			Role: "Senior dev",
+			img: Profile,
+			Name: "Azeem",
+			Role: "member",
 			desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, porro?",
-		},
-		{
-			img: "",
-			Name: "Other2",
-			Role: "Junior dev",
-			desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, porro?",
-		},
-		{
-			img: "",
-			Name: "Other3",
-			Role: "Hr",
-			desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, porro?",
+			Links: ""
 		},
 	];
 
