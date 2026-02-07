@@ -57,21 +57,24 @@ const Services = () => {
 				{/* section  */}
 				<div className="flex justify-between">
 					{/* left side  */}
-					<div className="h-130 flex flex-col justify-between w-1/3">
+					<div className="h-130 flex flex-col justify-between w-1/3 font-[m]">
 						<div className="p-6">
 							<h3 className="mb-2 text-6xl font-bold">Services</h3>
-							<h3 className="text-gray-400 mb-3 text-2xl">
+							<h3 className="font-[cursive] text-gray-400 mb-3 text-2xl">
 								For Customers
 							</h3>
 							<h3 className="mb-7 text-6xl font-bold">We Provide</h3>
-							<p className="text-xl font-medium text-gray-600">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Nesciunt aliquid pariatur itaque commodi?
+							<p className="text-sm font-medium text-gray-600">
+								We design and build fast, responsive, and
+								performance-focused websites with clean code and modern
+								UI to help businesses grow, improve user experience, and
+								create strong digital presence.
 							</p>
+						<div className="flex text-5xl mt-8">
+				<p>Scroll</p>
+						<ArrowRight size={50} className=""/>
 						</div>
-						<a href="/projects" className="ml-4 bg-purple-500 rounded-2xl flex justify-center w-2/3 py-2">
-							See Projects
-						</a>
+						</div>
 					</div>
 					{/* right side  */}
 					<div className="rightcard h-130 p-5 w-1/2 flex overflow-x-auto rounded flex-nowrap ">
@@ -106,23 +109,19 @@ const Services = () => {
 					</div>
 				</div>
 			</div>
-			<p>
-				For projects requiring backend systems, we collaborate with trusted
-				backend partners or work alongside your existing team.
-			</p>
 			<div className="mt-20">
-				<h1 className="text-2xl flex justify-self-center mb-20">
-					Who Each Service Is For
+				<h1 className="font-serif text-2xl flex justify-self-center mb-20 bg-black rounded-full px-5 py-3">
+					Service is Best & Not for...
 				</h1>
 				<div className="flex justify-around">
 					<div className="service-for">
-						<h1 className="text-lg">Best for:</h1>
+						<h1 className="text-xl font-semibold">Best for:</h1>
 						<li>Startups needing an MVP</li>
 						<li> Businesses redesigning outdated websites</li>
 						<li> Companies scaling traffic and users</li>
 					</div>
 					<div className="service-for">
-						<h1 className="text-lg">Not for:</h1>
+						<h1 className="text-xl font-semibold">Not for:</h1>
 						<li> People wanting “cheap and fast” </li>
 						<li>Projects without clear goals</li>
 						<li> Clients who just want a logo and vibes</li>
@@ -131,9 +130,7 @@ const Services = () => {
 			</div>
 
 			<div>
-				<button className="mt-15 px-6 py-3 bg-purple-600 text-white rounded-lg cursor-pointer flex justify-self-center">
-					Discuss your project
-				</button>
+				<p className="text-xl m-5 flex justify-self-center text-center font-mono bg-transparent shadow-[inset_1px_2px_6px_black]">Discuss Your Project by contacting us using Links in the Footer Below by clicking icons</p>
 			</div>
 		</>
 	);

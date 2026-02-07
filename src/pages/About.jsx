@@ -81,13 +81,7 @@ const About = () => {
 						return (
 							<div
 								key={idx}
-								className="p-7 rounded-2xl border border-gray-700/40 
-	bg-linear-to-b from-white/5 to-transparent
-	transition-all duration-300 ease-out
-	hover:border-purple-500/70
-	hover:shadow-2xl
-	hover:-translate-y-2
-	hover:bg-white/5"
+								className="card p-7"
 							>
 								<h2 className="text-xl font-semibold mb-3">
 									{props.head}
@@ -108,7 +102,7 @@ const About = () => {
 						return (
 							<div
 								key={idx}
-								className="border w-60 h-90 flex flex-col rounded-2xl justify-around items-center p-5 mt-5"
+								className="membercard w-60 h-90 flex flex-col rounded-2xl justify-around items-center p-5 mt-5"
 							>
 								<h1
 									style={{

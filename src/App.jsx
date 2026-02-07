@@ -9,10 +9,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
-
-
-
-
 	return (
 		<>
 			<Navbar />
@@ -20,10 +16,7 @@ export default function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/services" element={<Services />} />
 				<Route path="/projects" element={<Projects />} />
-				<Route
-					path="/about"
-					element={<About />}
-				/>
+				<Route path="/about" element={<About />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>

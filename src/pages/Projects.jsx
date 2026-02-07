@@ -11,21 +11,21 @@ const Projects = () => {
 			client: "College Project",
 			img: Restaurant,
 			// webLink: "https://haseeb-interior.netlify.app/",
-			info: "lorem ipsum a;sdlkfjsdlkf slkjfsl dsklfds fdsfdskjf dsflfkdsf s, fsdkf dsfdf lfds fdskjf dsk dsvmd vdsofdsofj ddfmd ldkf dk  slfdso fj dfhas;ldfajfa;djfldsfdljf  f dsjfdslfjslf ldskf fkl l ds;afj ;sfj sldfj ldfjldsf lsjdfosdjfowejf dklfdsklf",
+			info: "An early-stage website created during our college studies. The project focused on understanding core web structure and user experience basics, forming the foundation for our current standards in responsive and performance-driven web development.",
 		},
 		{
 			title: "Portfolio Website",
 			client: "Self",
 			img: Mirfeez,
 			webLink: "https://mirfeez.github.io/Mirfeez-portfolio/",
-			info: "lorem ipsum a;sdlkfjsdlkf slkjfsl dsklfds fdsfdskjf dsflfkdsf s, fsdkf dsfdf lfds fdskjf dsk dsvmd vdsofdsofj ddfmd ldkf dk  slfdso fj dfhas;ldfajfa;djfldsfdljf  f dsjfdslfjslf ldskf fkl l ds;afj ;sfj sldfj ldfjldsf lsjdfosdjfowejf dklfdsklf",
+			info: "A responsive and performance-focused portfolio website built to showcase design projects with a clean UI, fast loading speeds, and a professional online presence.",
 		},
 		{
 			title: "Interior Portfolio Website",
 			client: "Client",
 			img: Interior,
 			webLink: "https://haseeb-interior.netlify.app/",
-			info: "lorem ipsum a;sdlkfjsdlkf slkjfsl dsklfds fdsfdskjf dsflfkdsf s, fsdkf dsfdf lfds fdskjf dsk dsvmd vdsofdsofj ddfmd ldkf dk  slfdso fj dfhas;ldfajfa;djfldsfdljf  f dsjfdslfjslf ldskf fkl l ds;afj ;sfj sldfj ldfjldsf lsjdfosdjfowejf dklfdsklf",
+			info: "One of our early projects built while developing our foundational skills. Though not fully responsive, it helped us gain real-world experience and shaped our growth into creating modern, performance-focused websites today.",
 		},
 	];
 
@@ -67,7 +67,7 @@ const Projects = () => {
 										View
 									</a>
 								</div>
-								<div className="w-2/3 flex justify-self-center flex-col text-center mt-8">
+								<div className="border-b-2 pb-10 w-2/3 flex justify-self-center flex-col text-center mt-8">
 									<h1 className="text-3xl mb-5">Info:</h1>
 									<p>{props.info}</p>
 								</div>

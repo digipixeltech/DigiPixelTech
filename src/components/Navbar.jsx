@@ -10,8 +10,8 @@ const Navbar = () => {
    ${isActive ? "bg-purple-500 text-black" : ""}`;
 
 	return (
-		<nav className="relative flex justify-between items-center px-6 py-4 shadow-md z-50">
-			<div className="flex items-center gap-2 p-2 rounded-lg shadow-md ">
+		<nav className="sticky top-0 flex justify-between items-center px-6 py-2 shadow-md shadow-black z-50 bg-transparent backdrop-blur-md ">
+			<div className="flex items-center gap-2 p-2 rounded-lg ">
 				<img
 					id="logo"
 					className="w-11 rounded-full shadow shadow-purple-600  p-0.5"
