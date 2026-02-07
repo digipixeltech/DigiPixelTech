@@ -120,7 +120,7 @@
   background-position: center;
   /* box-shadow: inset 0 0 100px 85px var(--theme); */
   box-shadow: inset 0px 0px 31px 13px var(--theme);
-  height: 150vh;
+  height: 100vh;
 }
 
 .options{
