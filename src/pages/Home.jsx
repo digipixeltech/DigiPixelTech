@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
 	const homewwd = [
 		{
@@ -26,9 +28,9 @@ const Home = () => {
 					and digital solutions.
 				</p>
 
-				<button className="mt-6 px-6 py-3 bg-purple-600 text-white rounded-lg cursor-pointer">
+				<Link to="Projects" className="mt-6 px-6 py-3 bg-purple-600 text-white rounded-lg cursor-pointer">
 					See Our Work
-				</button>
+				</Link>
 			</section>
 			{/* <div>
 			<h1>Designing and developing modern web systems.</h1>
