@@ -1,5 +1,6 @@
 import { BriefcaseBusiness, Code, MousePointerClick } from "lucide-react";
 import { Link, Links } from "react-router-dom";
+import Mirfeez from "../img/Projects/Portfolio.Mirfeez.png";
 
 const Home = () => {
 	const homewwd = [
@@ -43,10 +44,10 @@ const Home = () => {
 				</div>
 			</section>
 			{/* <div>
-			<h1>Designing and developing modern web systems.</h1>
-			<p>From planning to deployment, with clarity at every step.</p>
-			<button>View Projects</button>
-		</div> */}
+		<h1>Designing and developing modern web systems.</h1>
+		<p>From planning to deployment, with clarity at every step.</p>
+		<button>View Projects</button>
+	</div> */}
 
 			<div className="mt-20">
 				<h1 class="text-4xl flex justify-center mb-20">What We Do</h1>
@@ -112,6 +113,67 @@ const Home = () => {
 							>
 								Get In Touch
 							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="h-150">
+				<h1 className="text-3xl flex justify-self-center my-20">
+					Featured Projects
+				</h1>
+				<div className="h-100 w-150 flex flex-col justify-self-center rounded-2xl shadow-black shadow-2xl">
+					<img src={Mirfeez} alt="" />
+					<h1 className="text-xl ml-7 mt-5">Portfolio Website</h1>
+					<a
+						href="https://mirfeez.github.io/Mirfeez-portfolio/"
+						className="featured-project text-gray-400 ml-7 mt-2 cursor-pointer"
+					>
+						View Project
+					</a>
+				</div>
+			</div>
+			<div>
+				<h1 class="text-4xl flex justify-center mb-20">How We Work</h1>
+				<div className="flex flex-row ml-5">
+					<div className="p-10 pr-8 w-1/4">
+						<h2>1. Planning</h2>
+						<p>Understanding goals and requirements.</p>
+					</div>
+					<div className="text-4xl flex items-center pb-9"> {`>`} </div>
+					<div className="p-10 w-1/4">
+						<h2>2. Design</h2>
+						<p> Creating clean and usable layouts.</p>
+					</div>
+					<div className="text-4xl flex items-center pb-10"> {`>`} </div>
+					<div className="p-8 w-1/4">
+						<h2>3. Development</h2>
+						<p>Building responsive front-end interfaces.</p>
+					</div>
+					<div className="text-4xl flex items-center pb-10"> {`>`} </div>
+					<div className="p-10 w-1/4 pt-7">
+						<h2>4. Delivery</h2>
+						<p> Testing and final deployment.</p>
+					</div>
+				</div>
+				<div className="flex justify-between my-20  mx-15">
+					<div>
+						<h1 className="text-3xl mb-5">Why Choose Us?</h1>
+						<ul className="lists">
+							<li>✓ &nbsp; Clean, Maintainable code</li>
+							<li>✓ &nbsp; Focused on Performance and Usability</li>
+							<li>✓ &nbsp; Clear Communication and timely delivery</li>
+						</ul>
+					</div>
+					<div>
+						<div className="flex flex-col justify-center rounded-2xl border-purple-900 border p-10 mr-10">
+							<h1 className="mb-6">Have a Project In Mind?</h1>
+							<a
+								href="/Contact"
+								className="px-6 py-3 w-35 bg-purple-600 text-white rounded-lg cursor-pointer"
+							>
+								Get In Touch
+							</a>
 						</div>
 					</div>
 				</div>
