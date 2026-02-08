@@ -1,6 +1,7 @@
 import { BriefcaseBusiness, Code, MousePointerClick } from "lucide-react";
 import { Link, Links } from "react-router-dom";
 import Mirfeez from "../img/Projects/Portfolio.Mirfeez.png";
+import DateTime from "../components/DateTime";
 
 const Home = () => {
 	const homewwd = [
@@ -25,13 +26,19 @@ const Home = () => {
 	return (
 		<>
 			<section className="home-bg text-center py-20 px-6 bg-[url(img/banner/home.png)] h-150">
-				<div className="mt-30 home-banner">
+				<div className="mt-18 home-banner">
+					<h1 className="mb-6">
+						<DateTime />
+					</h1>
 					<h2 className="text-4xl justify-self-center font-bold mb-4">
-						We Build Digital Experiences
+						We Respect <span className="bg-purple-500 rounded px-2 text-black shadow-purple-500">Time</span> - 
+						<span className="text-purple-500">Yours </span>
+						and <span className="text-purple-500">Ours</span>
 					</h2>
 					<p className="text-gray-600 max-w-xl mx-auto">
-						Digipixeltech helps businesses grow with modern websites, apps
-						and digital solutions.
+						Every second matters in performance, deadlines, and user
+						experience. Digipixeltech helps businesses grow with modern
+						websites, apps and digital solutions.
 					</p>
 					<div className="flex justify-center">
 						<Link
@@ -55,11 +62,11 @@ const Home = () => {
 					{homewwd.map((props) => {
 						return (
 							<>
-								<div class="card w-1/3 p-10 bg-">
+								<div class="card w-1/3 p-10 ">
 									<props.wwdIcon
 										size={45}
 										color="gray"
-										className="icon ml-41 mb-10"
+										className="icon justify-self-center mb-10"
 									/>
 									<h2 class="text-center text-xl mb-2">
 										{props.wwdHead}
@@ -74,20 +81,24 @@ const Home = () => {
 				</div>
 			</div>
 
-			
-
 			<div className="home-project h-150">
 				<h1 className="text-3xl flex justify-self-center my-20">
 					Featured Projects
 				</h1>
 				<div className="h-100 w-150 flex flex-col justify-self-center rounded-2xl shadow-black shadow-2xl">
 					<img src={Mirfeez} alt="" />
-					<h1 className="text-xl ml-7 mt-5">Portfolio Website</h1>
+					<h1 className="text-xl mt-5">
+						<span className="flex justify-self-center font-mono">
+							Portfolio Website
+						</span>
+					</h1>
 					<a
 						href="https://mirfeez.github.io/Mirfeez-portfolio/"
-						className="featured-project text-gray-400 ml-7 mt-2 cursor-pointer"
+						className=" mt-2 cursor-pointer"
 					>
-						View Project
+						<span className="featured-project justify-self-center flex border border-white px-2 py-1 rounded text-white">
+							View Project
+						</span>
 					</a>
 				</div>
 			</div>
@@ -102,14 +113,16 @@ const Home = () => {
 						</ul>
 					</div>
 					<div>
-						<div className="home-end-second flex flex-col justify-center rounded-2xl border-purple-900 border p-10 mr-10">
+						<div className="home-end-second flex flex-col rounded-2xl border-purple-900 border p-10 mr-10">
 							<h1 className="mb-6">Have a Project In Mind?</h1>
-							<a
-								href="/Contact"
-								className="px-6 py-3 w-35 bg-purple-600 text-white rounded-lg cursor-pointer"
-							>
-								Get In Touch
-							</a>
+							<div className="justify-center flex">
+								<a
+									href="/Contact"
+									className="px-6 py-3 w-35 hover:bg-purple-500 bg-purple-600 text-white rounded-lg cursor-pointer"
+								>
+									Get In Touch
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>

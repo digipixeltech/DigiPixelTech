@@ -4,9 +4,6 @@
   --theme: #150131;
 }
 
-*{
-  font-family: 'Courier New', Courier, monospace;
-}
 
 /* Animations */
 @keyframes float {
@@ -175,7 +172,10 @@ iframe::-webkit-scrollbar{
 }
 
 .featured-project:hover {
-  transform: translateY(-3px);
+  background-color: white;
+  color: black;
+  border: none;
+  box-shadow: 0 0 10px white;
 }
 
 /* navbar link */
