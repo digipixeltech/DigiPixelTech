@@ -53,12 +53,12 @@ const Services = () => {
 					Services
 				</h1>
 			</div> */}
-			<div className="mb-20 ">
+			<div className="service-main mb-20">
 				{/* section  */}
 				<div className="flex justify-between">
 					{/* left side  */}
 					<div className="h-130 flex flex-col justify-between w-1/3 font-[m]">
-						<div className="p-6">
+						<div className="service-head p-6">
 							<h3 className="mb-2 text-6xl font-bold">Services</h3>
 							<h3 className="font-[cursive] text-gray-400 mb-3 text-2xl">
 								For Customers
@@ -72,7 +72,7 @@ const Services = () => {
 							</p>
 						<div className="flex text-5xl mt-8">
 				<p>Scroll</p>
-						<ArrowRight size={50} className=""/>
+						<ArrowRight size={50} className="arrow"/>
 						</div>
 						</div>
 					</div>
@@ -90,7 +90,7 @@ const Services = () => {
 										src={p.image}
 										alt={p.title}
 									/>
-									<div className="absolute top-0 left-0 h-full w-full p-5 flex flex-col justify-between bg-black/53">
+									<div className="right-card-card absolute top-0 left-0 h-full w-full p-5 flex flex-col justify-between bg-black/53">
 										<h2 className="bg-white text-black rounded-full h-10 w-10 flex justify-center items-center text-xl font-semibold">
 											{id + 1}
 										</h2>
@@ -109,7 +109,7 @@ const Services = () => {
 					</div>
 				</div>
 			</div>
-			<div className="mt-20">
+			<div className="service-best mt-20">
 				<h1 className="font-serif text-2xl flex justify-self-center mb-20 bg-black rounded-full px-5 py-3">
 					Service is Best & Not for...
 				</h1>

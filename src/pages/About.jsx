@@ -52,7 +52,7 @@ const About = () => {
 	];
 	return (
 		<div>
-			<div className="max-w-5xl mx-auto text-center mt-10">
+			<div className="our-story max-w-5xl mx-auto text-center mt-10">
 				<h1 className="text-4xl font-semibold mb-6">Our Story</h1>
 
 				<p className="text-lg leading-relaxed text-gray-600">

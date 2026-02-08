@@ -31,7 +31,7 @@ const Projects = () => {
 
 	return (
 		<>
-			<div className="bg-img-projects bg-[url('img/banner/Project.png')] font-serif w-full h-150 bg-cover flex flex-col justify-center leading-normal gap-2">
+			<div className="project-head bg-img-projects bg-[url('img/banner/Project.png')] font-serif w-full h-150 bg-cover flex flex-col justify-center leading-normal gap-2">
 				<h1 className="ml-10 text-5xl">Discover the Projects </h1>
 				<h1 className="ml-10 text-3xl">that we have worked</h1>
 				<p className="ml-10">
@@ -40,7 +40,7 @@ const Projects = () => {
 				</p>
 			</div>
 
-			<div className="font-serif">
+			<div className="project-section font-serif">
 				<h1 className="mt-10 ml-10 text-5xl flex">Projects:-</h1>
 
 				{/* card  */}
@@ -67,7 +67,7 @@ const Projects = () => {
 										View
 									</a>
 								</div>
-								<div className="border-b-2 pb-10 w-2/3 flex justify-self-center flex-col text-center mt-8">
+								<div className="project-info border-b-2 pb-10 w-2/3 flex justify-self-center flex-col text-center mt-8">
 									<h1 className="text-3xl mb-5">Info:</h1>
 									<p>{props.info}</p>
 								</div>

@@ -24,9 +24,9 @@ const Home = () => {
 	];
 	return (
 		<>
-			<section className="text-center py-20 px-6 bg-[url(img/banner/home.png)] h-150">
-				<div className="mt-30">
-					<h2 className="text-4xl justsc font-bold mb-4">
+			<section className="home-bg text-center py-20 px-6 bg-[url(img/banner/home.png)] h-150">
+				<div className="mt-30 home-banner">
+					<h2 className="text-4xl justify-self-center font-bold mb-4">
 						We Build Digital Experiences
 					</h2>
 					<p className="text-gray-600 max-w-xl mx-auto">
@@ -36,7 +36,7 @@ const Home = () => {
 					<div className="flex justify-center">
 						<Link
 							to="Projects"
-							className="mt-6 px-6 py-3 w-40 bg-purple-600 text-white rounded-lg cursor-pointer"
+							className="home-banner-btn mt-6 px-6 py-3 w-40 bg-purple-600 text-white rounded-lg cursor-pointer"
 						>
 							See Our Work
 						</Link>
@@ -49,29 +49,9 @@ const Home = () => {
 		<button>View Projects</button>
 	</div> */}
 
-			<div className="mt-20">
+			<div className="what-we-do mt-20">
 				<h1 class="text-4xl flex justify-center mb-20">What We Do</h1>
-				<div className="flex gap-10 m-10">
-					{homewwd.map((props) => {
-						return (
-							<>
-								<div class="card w-1/3 p-10">
-									<h2 class="text-center text-xl mb-2">
-										{props.wwdHead}
-									</h2>
-									<p class="text-center text-gray-400">
-										{props.wwdInfo}
-									</p>
-								</div>
-							</>
-						);
-					})}
-				</div>
-			</div>
-
-			<div className="mt-20">
-				<h1 class="text-4xl flex justify-center mb-20">What We Do</h1>
-				<div className="flex gap-10 m-10">
+				<div className="flex home-card gap-10 m-10">
 					{homewwd.map((props) => {
 						return (
 							<>
@@ -79,7 +59,7 @@ const Home = () => {
 									<props.wwdIcon
 										size={45}
 										color="gray"
-										className="ml-41 mb-10"
+										className="icon ml-41 mb-10"
 									/>
 									<h2 class="text-center text-xl mb-2">
 										{props.wwdHead}
@@ -96,7 +76,7 @@ const Home = () => {
 
 			
 
-			<div className="h-150">
+			<div className="home-project h-150">
 				<h1 className="text-3xl flex justify-self-center my-20">
 					Featured Projects
 				</h1>
@@ -112,7 +92,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div>
-				<div className="flex justify-between my-20  mx-15">
+				<div className="home-end flex justify-between my-20  mx-15">
 					<div>
 						<h1 className="text-3xl mb-5">Why Choose Us?</h1>
 						<ul className="lists">
@@ -122,7 +102,7 @@ const Home = () => {
 						</ul>
 					</div>
 					<div>
-						<div className="flex flex-col justify-center rounded-2xl border-purple-900 border p-10 mr-10">
+						<div className="home-end-second flex flex-col justify-center rounded-2xl border-purple-900 border p-10 mr-10">
 							<h1 className="mb-6">Have a Project In Mind?</h1>
 							<a
 								href="/Contact"

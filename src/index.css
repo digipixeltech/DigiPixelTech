@@ -6,7 +6,6 @@
 
 /* Animations */
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0px);
@@ -22,7 +21,6 @@
 }
 
 @keyframes tilt {
-
   0%,
   100% {
     transform: rotate(-2deg);
@@ -99,7 +97,8 @@
 
 /* Background */
 .bg-space {
-  background: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9770934.jpg-Wl31ERQfbntJABIblVId5PIBjqP5Gx.jpeg") no-repeat center center/cover;
+  background: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9770934.jpg-Wl31ERQfbntJABIblVId5PIBjqP5Gx.jpeg")
+    no-repeat center center/cover;
 }
 
 /* UFO */
@@ -123,14 +122,13 @@
   height: 100vh;
 }
 
-.options{
-   color: rgb(189 129 232);
+.options {
+  color: rgb(189 129 232);
 }
 
 .options *:not(:first-child) {
   color: black;
 }
-
 
 /* .iframe{
    -moz-transform: scale(0.5);
@@ -163,17 +161,17 @@ iframe::-webkit-scrollbar{
   transform: translate3d(0px, -10px, 10px);
 }
 
-.lists li{
-   list-style: none;
-   margin: 15px 0;
+.lists li {
+  list-style: none;
+  margin: 15px 0;
 }
 
-.featured-project{
-   transition: 0.2s ease-in-out;
+.featured-project {
+  transition: 0.2s ease-in-out;
 }
 
-.featured-project:hover{
-   transform: translateY(-3px);
+.featured-project:hover {
+  transform: translateY(-3px);
 }
 
 /* navbar link */
@@ -215,24 +213,24 @@ iframe::-webkit-scrollbar{
   box-shadow: 1px 5px 5px black;
   border-radius: 10px;
   cursor: pointer;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.card-bg{
-   filter: brightness(50%);
+.card-bg {
+  filter: brightness(50%);
 }
 
 .rightcard::-webkit-scrollbar {
   display: none;
 }
 /* footer  */
-@media (max-width:768px) {
-  .left{
+@media (max-width: 768px) {
+  .left {
     justify-self: start;
   }
 }
-@media (min-width:768px) {
-  .quickLinks{
+@media (min-width: 768px) {
+  .quickLinks {
     margin-left: 2rem;
   }
 }
@@ -247,6 +245,273 @@ iframe::-webkit-scrollbar{
   transition: transform 0.3s;
 }
 
-.membercard:hover{
-    box-shadow: inset 1px 5px 5px black;
+.membercard:hover {
+  box-shadow: inset 1px 5px 5px black;
+}
+
+/* Responsive  */
+/* home page  */
+
+@media (max-width: 400px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  .home-bg {
+    height: 70vh;
+  }
+
+  .home-banner {
+    margin-top: 90px;
+  }
+
+  .home-banner h2 {
+    font-size: 14px;
+  }
+  .home-banner p {
+    font-size: 8px;
+  }
+
+  .home-banner-btn {
+    padding: 5px;
+    font-size: 10px;
+    width: 99px;
+    border-radius: 19px;
+    margin-top: 10px;
+  }
+
+  .what-we-do h1 {
+    font-size: 24px;
+    margin: 0 0px 12px 0px;
+  }
+
+  .home-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-card div {
+    width: 227px;
+    padding: 17px;
+    height: 182px;
+    margin-left: 0px;
+  }
+
+  .home-card div h2 {
+    font-size: 16px;
+  }
+  .home-card div p {
+    font-size: 8px;
+  }
+
+  .home-card div .icon {
+    display: flex;
+    justify-content: center;
+    margin: 1px 0 12px 66px;
+    align-items: center;
+    width: 28%;
+  }
+
+  .home-project {
+    height: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-project h1 {
+    font-size: 20px;
+    margin: 0 -4px 35px 0px;
+  }
+
+  .home-project div {
+    width: 282px;
+    height: 214px;
+  }
+
+  .home-project div h1 {
+    font-size: 15px;
+    margin: 15px 0px 0px 12px;
+  }
+  .home-project div a {
+    font-size: 11px;
+    margin: 5px 0px 0px 12px;
+  }
+
+  .home-end {
+    width: 85vw;
+    height: 100%;
+  }
+
+  .home-end > div {
+    margin-left: -17px;
+  }
+
+  .home-end > div h1 {
+    font-size: 12px;
+  }
+  .home-end > div ul {
+    font-size: 8px;
+  }
+  .home-end > div ul li {
+    margin: 8px 0;
+  }
+
+  .home-end-second {
+    width: 140px;
+    padding: 15px;
+    height: 110px;
+  }
+
+  .home-end-second h1 {
+    margin-bottom: 10px;
+  }
+
+  .home-end-second a {
+    font-size: 9px;
+    width: 71px;
+    padding: 9px;
+  }
+
+  /* service page */
+
+  .service-main {
+    margin-bottom: 5px;
+  }
+
+  .service-head {
+    width: 159px;
+  }
+
+  .service-head h3 {
+    font-size: 21px;
+  }
+  .service-head p,
+  .arrow {
+    font-size: 10px;
+  }
+
+  .arrow {
+    height: 14px;
+    width: 40px;
+    position: relative;
+    bottom: 3px;
+  }
+
+  .rightcard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 295px;
+    margin-right: 27px;
+    height: 400px;
+  }
+
+  .rightcard > div {
+    width: 214px;
+    height: 256px;
+  }
+
+  .rightcard > div h1 {
+    font-size: 15px;
+  }
+
+  .rightcard > div p {
+    font-size: 10px;
+  }
+
+  .right-card-card h2 {
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+  }
+
+  .service-best {
+    margin-top: 5px;
+  }
+
+  .service-best > h1 {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+
+  .service-for {
+    padding: 30px;
+  }
+
+  .service-for h1 {
+    font-size: 15px;
+  }
+
+  .service-for li {
+    font-size: 12px;
+  }
+
+  /* Project page  */
+
+  .project-head h1 {
+    font-size: 23px;
+  }
+
+  .project-head p {
+    font-size: 11px;
+  }
+
+  .project-section h1 {
+    font-size: 28px;
+  }
+
+  .project-section h2 {
+    font-size: 19px;
+  }
+
+  .project-section h3 {
+    font-size: 17px;
+  }
+
+  .project-info h1 {
+    font-size: 20px;
+  }
+
+  .project-info p {
+    font-size: 15px;
+  }
+
+  /* About page  */
+
+  .our-story {
+    padding: 30px;
+  }
+
+  .our-story h1 {
+    font-size: 21px;
+  }
+
+  .our-story p {
+    font-size: 16px;
+  }
+
+  /* Contact page  */
+
+  .before-reach {
+    height: 270px;
+    margin-bottom: 160px;
+  }
+
+  .form-select div{
+    margin: 20px 20px;
+  }
+  
+  .form-select div p,select{
+    width: 83px;
+    font-size: 18px;
+  }
+
+  .form-start{
+    margin-bottom: 105px;
+  }
 }
