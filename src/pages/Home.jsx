@@ -82,25 +82,25 @@ const Home = () => {
 			</div>
 
 			<div className="home-project h-150">
-				<h1 className="text-3xl flex justify-self-center my-20">
+				<h1 className="text-3xl flex justify-self-center my-20 font-mono">
 					Featured Projects
 				</h1>
-				<div className="h-100 w-150 flex flex-col justify-self-center rounded-2xl shadow-black shadow-2xl">
+				<div className="h-90 w-150 flex flex-col justify-self-center rounded-2xl shadow-black shadow-2xl">
 					<img src={Mirfeez} alt="" />
 					<h1 className="text-xl mt-5">
 						<span className="flex justify-self-center font-mono">
 							Portfolio Website
 						</span>
 					</h1>
-					<a
-						href="https://mirfeez.github.io/Mirfeez-portfolio/"
+				</div>
+					<Link
+						to="/projects"
 						className=" mt-2 cursor-pointer"
 					>
-						<span className="featured-project justify-self-center flex border border-white px-2 py-1 rounded text-white">
-							View Project
+						<span className="bg-purple-600 mt-5 featured-project justify-self-center flex px-2 py-1 rounded text-black">
+							View Projects
 						</span>
-					</a>
-				</div>
+					</Link>
 			</div>
 			<div>
 				<div className="home-end flex justify-between my-20  mx-15">
@@ -116,12 +116,12 @@ const Home = () => {
 						<div className="home-end-second flex flex-col rounded-2xl border-purple-900 border p-10 mr-10">
 							<h1 className="mb-6">Have a Project In Mind?</h1>
 							<div className="justify-center flex">
-								<a
-									href="/Contact"
+								<Link
+									to="/Contact"
 									className="px-6 py-3 w-35 hover:bg-purple-500 bg-purple-600 text-white rounded-lg cursor-pointer"
 								>
 									Get In Touch
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
