@@ -313,7 +313,6 @@ iframe::-webkit-scrollbar{
   .home-card div .icon {
     display: flex;
     justify-content: center;
-    margin: 1px 0 12px 66px;
     align-items: center;
     width: 28%;
   }
