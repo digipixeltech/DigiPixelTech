@@ -74,7 +74,7 @@ const Projects = () => {
 									href={props.webLink}
 									className=" mt-2 cursor-pointer"
 								>
-									<span className="featured-project justify-self-center flex border border-white px-2 py-1 rounded text-white">
+									<span className="featured-project justify-self-center flex px-2 py-1 rounded text-white bg-purple-600">
 										View Project
 									</span>
 								</a>
