@@ -7,7 +7,7 @@ const pool = new Pool({
 
 exports.handler = async function () {
   try {
-    const result = await pool.query("SELECT * FROM Contact_form");
+    const result = await pool.query("SELECT * FROM contact_form");
 
     return {
       statusCode: 200,
