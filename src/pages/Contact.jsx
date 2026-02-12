@@ -273,9 +273,6 @@ const Contact = () => {
             <button
               type="submit"
               className="bg-purple-600 hover:bg-purple-500 transition-all duration-300 py-3 rounded-xl font-semibold text-white shadow-lg"
-              onsubmit={() => {
-                alert("We will soon get in touch");
-              }}
             >
               Send Message
             </button>

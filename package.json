@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "@netlify/neon": "^0.1.2",
     "@tailwindcss/vite": "^4.1.18",
     "bootstrap-icons": "^1.13.1",
     "git": "^0.1.5",
     "install": "^0.13.0",
     "lucide-react": "^0.563.0",
+    "neon": "^2.0.0",
     "npm": "^11.8.0",
     "pg": "^8.18.0",
     "react": "^19.2.0",
