@@ -1,6 +1,57 @@
 import { ArrowDown } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    projectType: "",
+    projectScope: "",
+    timeline: "",
+    budget: "",
+    availability: "",
+    details: "",
+  });
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    
+    setForm(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("/.netlify/functions/db", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(form)
+    });
+
+    const text = await res.text(); // get raw response
+    let data;
+    try {
+      data = JSON.parse(text); // parse if possible
+    } catch {
+      data = text; // fallback
+    }
+
+    console.log(data);
+    alert("Submitted successfully");
+
+  } catch (error) {
+    console.error(error);
+    alert("Error submitting form");
+  }
+};
+
   return (
     <>
       {/* <p className="text-6xl">*idg thel style add aakava /// </p> */}
@@ -64,7 +115,7 @@ const Contact = () => {
             Contact Us
           </h1>
 
-          <form className="flex flex-col gap-4 text-sm font-mono leading-5">
+          <form id="contactForm" onSubmit={handleSubmit} className="flex flex-col gap-4 text-sm font-mono leading-5">
             <div className="bg-black/5 rounded-2xl p-2 shadow-[0_0_5px_black]">
               <div>
                 <lable className="flex gap-2">
@@ -72,7 +123,10 @@ const Contact = () => {
                   <ArrowDown size={20} />{" "}
                 </lable>
                 <input
-                  type="text"
+                name="name"
+                type="text"
+                onChange={handleChange}
+                value={form.name}
                   placeholder="Your Name..."
                   className="w-full bg-transparent border-b border-purple-400 focus:border-purple-500 outline-none text-white py-2"
                   required
@@ -81,7 +135,10 @@ const Contact = () => {
 
               <div>
                 <input
+                name="email"
                   type="email"
+                  onChange={handleChange}
+                  value={form.email}
                   placeholder="Your Email..."
                   className="w-full bg-transparent border-b border-purple-400 focus:border-purple-500 outline-none text-white py-2"
                   required
@@ -93,8 +150,9 @@ const Contact = () => {
               <div className="">
                 <p>Project Type :</p>
                 <select
-                  name="project-type"
+                  name="projectType"
                   id=""
+                  onChange={handleChange}
                   required
                   className="options bg-transparent"
                 >
@@ -122,8 +180,9 @@ const Contact = () => {
               <div className="ml-10">
                 <p>Project Scope :</p>
                 <select
-                  name="project-scope"
+                  name="projectScope"
                   id=""
+                  onChange={handleChange}
                   className="options bg-transparent"
                   required
                 >
@@ -140,8 +199,9 @@ const Contact = () => {
               <div className="mt-5">
                 <p>Timeline :</p>
                 <select
-                  name="Timeline"
+                  name="timeline"
                   id=""
+                  onChange={handleChange}
                   className="options bg-transparent"
                   required
                 >
@@ -159,6 +219,7 @@ const Contact = () => {
                 <select
                   name="budget"
                   id=""
+                  onChange={handleChange}
                   className="options bg-transparent"
                   required
                 >
@@ -178,16 +239,18 @@ const Contact = () => {
               <div className="flex">
                 <input
                   type="radio"
-                  name="Availability"
+                  name="availability"
                   value="Yes"
+                  onChange={handleChange}
                   className=""
                   required
                 />
                 Yes
                 <input
                   type="radio"
-                  name="Availability"
+                  name="availability"
                   value="No"
+                  onChange={handleChange}
                   className="ml-5"
                   required
                 />
@@ -197,6 +260,9 @@ const Contact = () => {
             <div className=" bg-black/5 rounded-2xl p-2 shadow-[0_0_5px_black]">
               <p>Project Details</p>
               <textarea
+              name="details"
+              value={form.details}
+              onChange={handleChange}
                 placeholder="Briefly describe what you want to build and the goal of the project.."
                 rows="4"
                 className="w-full bg-transparent border-b border-purple-400 focus:border-purple-500 outline-none text-white py-2 resize-none"
