@@ -51,8 +51,6 @@ const Contact = () => {
 	// 	}
 	// };
 
-  const [Name, setName] = useState("");
-
   // emailjs
 
   const contactForm = useRef();
@@ -68,7 +66,7 @@ const Contact = () => {
         "gFAIzVqxU0aFW8R3g",
       )
       .then(() => {
-        alert(`Thank You ${Name}, We'll Get Back To You Soon!`);
+        alert(`Thank You ${form.name}, We'll Get Back To You Soon!`);
         contactForm.current.reset();
       })
       .catch((error) => {
