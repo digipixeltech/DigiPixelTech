@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
 	const [form, setForm] = useState({
@@ -10,7 +11,7 @@ const Contact = () => {
 		timeline: "",
 		budget: "",
 		availability: "",
-		details: "",
+		message: "",
 	});
 
 	const handleChange = (e) => {
@@ -22,33 +23,58 @@ const Contact = () => {
 		}));
 	};
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+	// const handleSubmit = async (e) => {
+	// 	e.preventDefault();
 
-		try {
-			const res = await fetch("/.netlify/functions/db", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(form),
-			});
+	// 	try {
+	// 		const res = await fetch("/.netlify/functions/db", {
+	// 			method: "POST",
+	// 			headers: {
+	// 				"Content-Type": "application/json",
+	// 			},
+	// 			body: JSON.stringify(form),
+	// 		});
 
-			const text = await res.text(); // get raw response
-			let data;
-			try {
-				data = JSON.parse(text); // parse if possible
-			} catch {
-				data = text; // fallback
-			}
+	// 		const text = await res.text(); // get raw response
+	// 		let data;
+	// 		try {
+	// 			data = JSON.parse(text); // parse if possible
+	// 		} catch {
+	// 			data = text; // fallback
+	// 		}
 
-			console.log(data);
-			alert("Submitted successfully");
-		} catch (error) {
-			console.error(error);
-			alert("Error submitting form");
-		}
-	};
+	// 		console.log(data);
+	// 		alert("Submitted successfully");
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 		alert("Error submitting form");
+	// 	}
+	// };
+
+  const [Name, setName] = useState("");
+
+  // emailjs
+
+  const contactForm = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_xnh385t",
+        "template_h8zsgzd",
+        contactForm.current,
+        "gFAIzVqxU0aFW8R3g",
+      )
+      .then(() => {
+        alert(`Thank You ${Name}, We'll Get Back To You Soon!`);
+        contactForm.current.reset();
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+      });
+  };
 
 	return (
 		<>
@@ -117,6 +143,7 @@ const Contact = () => {
 					</h1>
 
 					<form
+          ref={contactForm}
 						id="contactForm"
 						onSubmit={handleSubmit}
 						className="flex flex-col gap-4 text-sm font-mono leading-5 "
@@ -151,7 +178,7 @@ const Contact = () => {
 							</div>
 						</div>
 
-						<div className="form-select grid grid-cols-2 bg-black/5 rounded-2xl p-2 shadow-[0_0_5px_black]">
+						{/* <div className="form-select grid grid-cols-2 bg-black/5 rounded-2xl p-2 shadow-[0_0_5px_black]">
 							<div className="">
 								<p>Project Type :</p>
 								<select
@@ -274,14 +301,14 @@ const Contact = () => {
 								/>
 								No
 							</div>
-						</div>
+						</div> */}
 						<div className=" bg-black/5 rounded-2xl p-2 shadow-[0_0_5px_black]">
-							<p>Project Details</p>
+							<p>Message</p>
 							<textarea
-								name="details"
+								name="message"
 								value={form.details}
 								onChange={handleChange}
-								placeholder="Briefly describe what you want to build and the goal of the project.."
+								placeholder="Briefly describe.."
 								rows="4"
 								className="w-full bg-transparent border-b border-purple-400 focus:border-purple-500 outline-none text-white py-2 resize-none"
 								required
