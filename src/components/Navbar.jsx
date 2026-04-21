@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../img/Logo/dpt-logo.png";
 import { NavLink } from "react-router-dom";
+import { motion } from "motion/react";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -12,44 +13,154 @@ const Navbar = () => {
 	return (
 		<nav className="sticky top-0 flex justify-between items-center px-6 py-2 shadow-md shadow-black z-50 bg-transparent backdrop-blur-md ">
 			<div className="flex items-center gap-2 p-2 rounded-lg ">
-				<img
+				<motion.img
+					initial={{
+						opacity: 0,
+						y: -10,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						delay:0.3,
+						duration:0.5
+					}}
 					id="logo"
 					className="w-11 rounded-full shadow shadow-purple-600  p-0.5"
 					src={logo}
 					alt="Digipixeltech logo"
 				/>
-				<h1 className="text-xl font-bold text-purple-600">DigiPixelTech</h1>
+				<motion.h1
+					initial={{
+						opacity: 0,
+						y: -10,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						delay:0.3,
+						duration:0.5
+					}}
+					className="text-xl font-bold text-purple-600"
+				>
+					DigiPixelTech
+				</motion.h1>
 			</div>
 			<div className="hidden md:flex gap-6 font-medium">
-				<NavLink to="/" className={navClass}>
+				<motion.div
+				initial={{
+					y:-10,
+					opacity:0
+				}}
+				animate={{
+					y:0,
+					opacity:1
+				}}
+				transition={{
+					delay:0.3,
+					duration:0.5
+				}}
+				>
+					<NavLink to="/" className={navClass}>
 					Home
 				</NavLink>
+					</motion.div>
 
-				<NavLink to="/services" className={navClass}>
+				<motion.div
+				initial={{
+					y:-10,
+					opacity:0
+				}}
+				animate={{
+					y:0,
+					opacity:1
+				}}
+				transition={{
+					delay:0.3,
+					duration:0.5
+				}}
+				>
+					<NavLink to="/services" className={navClass}>
 					Services
 				</NavLink>
+					</motion.div>
 
-				<NavLink to="/projects" className={navClass}>
+				<motion.div
+				initial={{
+					y:-10,
+					opacity:0
+				}}
+				animate={{
+					y:0,
+					opacity:1
+				}}
+				transition={{
+					delay:0.3,
+					duration:0.5
+				}}
+				>
+					<NavLink to="/projects" className={navClass}>
 					Projects
 				</NavLink>
+					</motion.div>
 
-				<NavLink to="/about" className={navClass}>
+				<motion.div
+				initial={{
+					y:-10,
+					opacity:0
+				}}
+				animate={{
+					y:0,
+					opacity:1
+				}}
+				transition={{
+					delay:0.3,
+					duration:0.5
+				}}
+				>
+					<NavLink to="/about" className={navClass}>
 					About
 				</NavLink>
+					</motion.div>
 
-				<NavLink to="/contact" className={navClass}>
+				<motion.div
+				initial={{
+					y:-10,
+					opacity:0
+				}}
+				animate={{
+					y:0,
+					opacity:1
+				}}
+				transition={{
+					delay:0.3,
+					duration:0.5
+				}}
+				>
+					<NavLink to="contact" className={navClass}>
 					Contact
 				</NavLink>
+					</motion.div>
 			</div>
 			{/* Mobile menu button */}
 			<button
-				className="md:hidden p-2 rounded-md  focus:outline-none hover:bg-black"
+				className="md:hidden p-2 rounded-md  focus:outline-none"
 				onClick={() => setIsOpen(!isOpen)}
 				aria-label={isOpen ? "Close menu" : "Open menu"}
 			>
 				{isOpen ? (
 					/* Close Icon */
-					<svg
+					<motion.svg
+						animate={{
+							x: -20,
+						}}
+						transition={{
+							duration: 0.4,
+							delay: 0.2,
+						}}
 						className="w-6 h-6"
 						fill="none"
 						stroke="currentColor"
@@ -62,7 +173,7 @@ const Navbar = () => {
 							strokeWidth={2}
 							d="M6 18L18 6M6 6l12 12"
 						/>
-					</svg>
+					</motion.svg>
 				) : (
 					/* Hamburger Icon */
 					<svg
@@ -83,7 +194,21 @@ const Navbar = () => {
 			</button>
 			{/* Mobile menu panel */}
 			{isOpen && (
-				<div className="md:hidden absolute right-4 top-full mt-1 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-2 flex flex-col gap-2">
+				<motion.div
+					initial={{
+						x: 20,
+						opacity: 0,
+					}}
+					animate={{
+						x: 0,
+						opacity: 1,
+					}}
+					transition={{
+						duration: 0.4,
+						delay: 0.2,
+					}}
+					className="md:hidden absolute right-4 top-full mt-1 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-2 flex flex-col gap-2"
+				>
 					<NavLink to="/" className={navClass}>
 						Home
 					</NavLink>
@@ -103,7 +228,7 @@ const Navbar = () => {
 					<NavLink to="/contact" className={navClass}>
 						Contact
 					</NavLink>
-				</div>
+				</motion.div>
 			)}
 		</nav>
 	);

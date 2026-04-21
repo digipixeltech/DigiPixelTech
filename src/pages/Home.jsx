@@ -2,6 +2,7 @@ import { BriefcaseBusiness, Code, MousePointerClick } from "lucide-react";
 import { Link, Links } from "react-router-dom";
 import Mirfeez from "../img/Projects/Portfolio.Mirfeez.png";
 import DateTime from "../components/DateTime";
+import { motion } from "motion/react";
 
 const Home = () => {
 	const homewwd = [
@@ -27,55 +28,95 @@ const Home = () => {
 		<>
 			<section className="home-bg text-center py-20 px-6 bg-[url(img/banner/home.png)] h-150">
 				<div className="mt-18 home-banner">
-					<h1 className="mb-6">
+					<motion.h1
+						initial={{
+							opacity: 0,
+						}}
+						animate={{
+							opacity: 1,
+						}}
+						transition={{
+							delay: 0.3,
+							duration: 0.5,
+						}}
+						className="mb-6"
+					>
 						<DateTime />
-					</h1>
-					<h2 className="text-4xl justify-self-center font-bold mb-4">
-						We Respect <span className="bg-purple-500 rounded px-2 text-black shadow-purple-500">Time</span> - 
-						<span className="text-purple-500">Yours </span>
+					</motion.h1>
+					<motion.h2
+						initial={{
+							y: 20,
+							opacity: 0,
+						}}
+						animate={{
+							y: 0,
+							opacity: 1,
+						}}
+						transition={{
+							delay: 0.3,
+							duration: 0.5,
+						}}
+						className="text-4xl justify-self-center font-bold mb-4 "
+					>
+						We Respect
+						<span className="ml-1 bg-purple-500 rounded px-2 text-black shadow-purple-500">
+							Time
+						</span>
+						-<span className="text-purple-500">Yours </span>
 						and <span className="text-purple-500">Ours</span>
-					</h2>
-					<p className="text-gray-600 max-w-xl mx-auto">
+					</motion.h2>
+					<motion.p
+						initial={{ opacity: 0, y:-30 }}
+						animate={{ opacity: 1, y:0 }}
+						transition={{
+							delay: 0.3,
+							duration: 0.5,
+						}}
+						className="text-gray-600 max-w-xl mx-auto"
+					>
 						Every second matters in performance, deadlines, and user
 						experience. Digipixeltech helps businesses grow with modern
 						websites, apps and digital solutions.
-					</p>
-					<div className="flex justify-center">
+					</motion.p>
+					<motion.div
+						initial={{ opacity: 0, y:30 }}
+						animate={{ opacity: 1, y:0 }}
+						transition={{
+							delay: 0.3,
+							duration: 0.5,
+						}}
+						className="flex justify-center"
+					>
 						<Link
 							to="Projects"
 							className="home-banner-btn mt-6 px-6 py-3 w-40 bg-purple-600 text-white rounded-lg cursor-pointer"
 						>
 							See Our Work
 						</Link>
-					</div>
+					</motion.div>
 				</div>
 			</section>
-			{/* <div>
-		<h1>Designing and developing modern web systems.</h1>
-		<p>From planning to deployment, with clarity at every step.</p>
-		<button>View Projects</button>
-	</div> */}
 
 			<div className="what-we-do mt-20">
-				<h1 class="text-4xl flex justify-center mb-20">What We Do</h1>
-				<div className="flex home-card gap-10 m-10">
-					{homewwd.map((props) => {
+				<h1 className="text-4xl flex justify-center mb-20">What We Do</h1>
+				<div className="flex home-card gap-10 m-10 flex-wrap justify-center">
+					{homewwd.map((props, idx) => {
 						return (
-							<>
-								<div class="card w-1/3 p-10 ">
+							<div key={idx} className="">
+								<div className="card w-100 p-10 ">
 									<props.wwdIcon
 										size={45}
 										color="gray"
 										className="icon justify-self-center mb-10"
 									/>
-									<h2 class="text-center text-xl mb-2">
+									<h2 className="text-center text-xl mb-2">
 										{props.wwdHead}
 									</h2>
-									<p class="text-center text-gray-400">
+									<p className="text-center text-gray-400">
 										{props.wwdInfo}
 									</p>
 								</div>
-							</>
+							</div>
 						);
 					})}
 				</div>
@@ -93,14 +134,11 @@ const Home = () => {
 						</span>
 					</h1>
 				</div>
-					<Link
-						to="/projects"
-						className=" mt-2 cursor-pointer"
-					>
-						<span className="bg-purple-600 mt-5 featured-project justify-self-center flex px-2 py-1 rounded text-black">
-							View Projects
-						</span>
-					</Link>
+				<Link to="/projects" className=" mt-2 cursor-pointer">
+					<span className="bg-purple-600 mt-5 featured-project justify-self-center flex px-2 py-1 rounded text-black">
+						View Projects
+					</span>
+				</Link>
 			</div>
 			<div>
 				<div className="home-end flex justify-between my-20  mx-15">

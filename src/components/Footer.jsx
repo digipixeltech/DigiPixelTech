@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import { Phone, Instagram, MailIcon, Target } from "lucide-react";
+import { Phone, Instagram, MailIcon } from "lucide-react";
 import { Whatsapp } from "react-bootstrap-icons";
+import {motion} from 'motion/react'
 
 const Footer = () => {
 	const navClass = ({ isActive }) =>
@@ -8,7 +9,18 @@ const Footer = () => {
 	   hover:bg-purple-500 hover:text-black w-full md:w-40
 	   ${isActive ? "bg-purple-500 text-black" : ""}`;
 	return (
-		<footer className="bg-black text-gray-300 mt-20 border-t border-purple-500/30">
+		<motion.footer
+		initial={{
+			opacity:0
+		}} 
+		animate={{
+			opacity:1
+		}}
+		transition={{
+			delay:0.3,
+			duration:0.5
+		}}
+		className="bg-black text-gray-300 mt-20 border-t border-purple-500/30">
 			<div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-10">
 				{/* Company Info */}
 				<div>
@@ -69,22 +81,22 @@ const Footer = () => {
 					</h3>
 
 					<div className="flex flex-wrap gap-3 mb-4">
-						<a Target='_blank'
+						<a target="_blank"
 							href="https://www.instagram.com/digipixeltech/"
 							className="hover:text-pink-500 -mt-px"
 						>
 							<Instagram />
 						</a>
-						<a Target='_blank'
+						<a target="_blank"
 							href="https://wa.me/917411712661"
 							className="hover:text-green-400"
 						>
 							<Whatsapp size={22} />
 						</a>
-						<a Target='_blank' href="tel:+916360836891" className="hover:text-green-700">
+						<a target="_blank" href="tel:+916360836891" className="hover:text-green-700">
 							<Phone />
 						</a>
-						<a Target='_blank' href="mailto:digipixeltechsolution@gmail.com?subject=Project Inquiry&body=Hello DigiPixelTech, I want to discuss a project." className="hover:text-gray-500">
+						<a target="_blank" href="mailto:digipixeltechsolution@gmail.com?subject=Project Inquiry&body=Hello DigiPixelTech, I want to discuss a project." className="hover:text-gray-500">
 							<MailIcon />
 						</a>
 					</div>
@@ -95,7 +107,7 @@ const Footer = () => {
 			<div className="border-t border-purple-500/20 text-center py-4 text-sm text-gray-400">
 				© {new Date().getFullYear()} DigiPixelTech. All rights reserved.
 			</div>
-		</footer>
+		</motion.footer>
 	);
 };
 
