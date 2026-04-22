@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "../img/Logo/dpt-logo.png";
 import { NavLink } from "react-router-dom";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +23,8 @@ const Navbar = () => {
 						opacity: 1,
 					}}
 					transition={{
-						delay:0.3,
-						duration:0.5
+						delay: 0.3,
+						duration: 0.5,
 					}}
 					id="logo"
 					className="w-11 rounded-full shadow shadow-purple-600  p-0.5"
@@ -41,8 +41,8 @@ const Navbar = () => {
 						opacity: 1,
 					}}
 					transition={{
-						delay:0.3,
-						duration:0.5
+						delay: 0.3,
+						duration: 0.5,
 					}}
 					className="text-xl font-bold text-purple-600"
 				>
@@ -51,99 +51,99 @@ const Navbar = () => {
 			</div>
 			<div className="hidden md:flex gap-6 font-medium">
 				<motion.div
-				initial={{
-					y:-10,
-					opacity:0
-				}}
-				animate={{
-					y:0,
-					opacity:1
-				}}
-				transition={{
-					delay:0.3,
-					duration:0.5
-				}}
+					initial={{
+						y: -10,
+						opacity: 0,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						delay: 0.3,
+						duration: 0.5,
+					}}
 				>
 					<NavLink to="/" className={navClass}>
-					Home
-				</NavLink>
-					</motion.div>
+						Home
+					</NavLink>
+				</motion.div>
 
 				<motion.div
-				initial={{
-					y:-10,
-					opacity:0
-				}}
-				animate={{
-					y:0,
-					opacity:1
-				}}
-				transition={{
-					delay:0.3,
-					duration:0.5
-				}}
+					initial={{
+						y: -10,
+						opacity: 0,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						delay: 0.3,
+						duration: 0.5,
+					}}
 				>
 					<NavLink to="/services" className={navClass}>
-					Services
-				</NavLink>
-					</motion.div>
+						Services
+					</NavLink>
+				</motion.div>
 
 				<motion.div
-				initial={{
-					y:-10,
-					opacity:0
-				}}
-				animate={{
-					y:0,
-					opacity:1
-				}}
-				transition={{
-					delay:0.3,
-					duration:0.5
-				}}
+					initial={{
+						y: -10,
+						opacity: 0,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						delay: 0.3,
+						duration: 0.5,
+					}}
 				>
 					<NavLink to="/projects" className={navClass}>
-					Projects
-				</NavLink>
-					</motion.div>
+						Projects
+					</NavLink>
+				</motion.div>
 
 				<motion.div
-				initial={{
-					y:-10,
-					opacity:0
-				}}
-				animate={{
-					y:0,
-					opacity:1
-				}}
-				transition={{
-					delay:0.3,
-					duration:0.5
-				}}
+					initial={{
+						y: -10,
+						opacity: 0,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						delay: 0.3,
+						duration: 0.5,
+					}}
 				>
 					<NavLink to="/about" className={navClass}>
-					About
-				</NavLink>
-					</motion.div>
+						About
+					</NavLink>
+				</motion.div>
 
 				<motion.div
-				initial={{
-					y:-10,
-					opacity:0
-				}}
-				animate={{
-					y:0,
-					opacity:1
-				}}
-				transition={{
-					delay:0.3,
-					duration:0.5
-				}}
+					initial={{
+						y: -10,
+						opacity: 0,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						delay: 0.3,
+						duration: 0.5,
+					}}
 				>
 					<NavLink to="contact" className={navClass}>
-					Contact
-				</NavLink>
-					</motion.div>
+						Contact
+					</NavLink>
+				</motion.div>
 			</div>
 			{/* Mobile menu button */}
 			<button
@@ -155,11 +155,10 @@ const Navbar = () => {
 					/* Close Icon */
 					<motion.svg
 						animate={{
-							x: -20,
+							x: -18,
 						}}
 						transition={{
 							duration: 0.4,
-							delay: 0.2,
 						}}
 						className="w-6 h-6"
 						fill="none"
@@ -176,7 +175,16 @@ const Navbar = () => {
 					</motion.svg>
 				) : (
 					/* Hamburger Icon */
-					<svg
+					<motion.svg
+						initial={{
+							x: -20,
+						}}
+						animate={{
+							x: 0,
+						}}
+						transition={{
+							duration: 0.5,
+						}}
 						className="w-6 h-6 "
 						fill="none"
 						stroke="currentColor"
@@ -189,47 +197,49 @@ const Navbar = () => {
 							strokeWidth={2}
 							d="M4 6h16M4 12h16M4 18h16"
 						/>
-					</svg>
+					</motion.svg>
 				)}
 			</button>
 			{/* Mobile menu panel */}
-			{isOpen && (
-				<motion.div
-					initial={{
-						x: 20,
-						opacity: 0,
-					}}
-					animate={{
-						x: 0,
-						opacity: 1,
-					}}
-					transition={{
-						duration: 0.4,
-						delay: 0.2,
-					}}
-					className="md:hidden absolute right-4 top-full mt-1 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-2 flex flex-col gap-2"
-				>
-					<NavLink to="/" className={navClass}>
-						Home
-					</NavLink>
+			<AnimatePresence>
+				{isOpen && (
+					<motion.div
+						initial={{
+							x: 20,
+							opacity: 0,
+						}}
+						animate={{
+							x: 0,
+							opacity: 1,
+						}}
+						exit={{ x: 20, opacity: 0 }}
+						transition={{
+							duration: 0.4,
+						}}
+						className="md:hidden absolute right-4 top-full mt-1 bg-black border  border-purple-500 shadow-md rounded-md py-2 px-2 flex flex-col gap-2"
+					>
+						<NavLink to="/" className={navClass}>
+							Home
+						</NavLink>
 
-					<NavLink to="/services" className={navClass}>
-						Services
-					</NavLink>
+						<NavLink to="/services" className={navClass}>
+							Services
+						</NavLink>
 
-					<NavLink to="/projects" className={navClass}>
-						Projects
-					</NavLink>
+						<NavLink to="/projects" className={navClass}>
+							Projects
+						</NavLink>
 
-					<NavLink to="/about" className={navClass}>
-						About
-					</NavLink>
+						<NavLink to="/about" className={navClass}>
+							About
+						</NavLink>
 
-					<NavLink to="/contact" className={navClass}>
-						Contact
-					</NavLink>
-				</motion.div>
-			)}
+						<NavLink to="/contact" className={navClass}>
+							Contact
+						</NavLink>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</nav>
 	);
 };

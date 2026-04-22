@@ -66,8 +66,8 @@ const Home = () => {
 						and <span className="text-purple-500">Ours</span>
 					</motion.h2>
 					<motion.p
-						initial={{ opacity: 0, y:-30 }}
-						animate={{ opacity: 1, y:0 }}
+						initial={{ opacity: 0, y: -30 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{
 							delay: 0.3,
 							duration: 0.5,
@@ -79,8 +79,8 @@ const Home = () => {
 						websites, apps and digital solutions.
 					</motion.p>
 					<motion.div
-						initial={{ opacity: 0, y:30 }}
-						animate={{ opacity: 1, y:0 }}
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{
 							delay: 0.3,
 							duration: 0.5,
@@ -98,12 +98,42 @@ const Home = () => {
 			</section>
 
 			<div className="what-we-do mt-20">
-				<h1 className="text-4xl flex justify-center mb-20">What We Do</h1>
+				<motion.h1
+					initial={{
+						y: -30,
+						opacity: 0,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						delay: 0.3,
+						duration: 0.5,
+					}}
+					className="text-4xl flex justify-center mb-20"
+				>
+					What We Do
+				</motion.h1>
 				<div className="flex home-card gap-10 m-10 flex-wrap justify-center">
 					{homewwd.map((props, idx) => {
 						return (
 							<div key={idx} className="">
-								<div className="card w-100 p-10 ">
+								<motion.div
+									initial={{
+										y: -20,
+										opacity: 0,
+									}}
+									animate={{
+										y: 0,
+										opacity: 1,
+									}}
+									transition={{
+										delay: 0.3,
+										duration: 0.5,
+									}}
+									className="card w-100 p-10 "
+								>
 									<props.wwdIcon
 										size={45}
 										color="gray"
@@ -115,7 +145,7 @@ const Home = () => {
 									<p className="text-center text-gray-400">
 										{props.wwdInfo}
 									</p>
-								</div>
+								</motion.div>
 							</div>
 						);
 					})}
@@ -126,14 +156,29 @@ const Home = () => {
 				<h1 className="text-3xl flex justify-self-center my-20 font-mono">
 					Featured Projects
 				</h1>
-				<div className="h-90 w-150 flex flex-col justify-self-center rounded-2xl shadow-black shadow-2xl">
+				<motion.div
+					initial={{
+						y: 30,
+						opacity: 0,
+					}}
+					animate={{
+						y: 0,
+						opacity: 1,
+					}}
+					
+					transition={{
+						delay: 0.3,
+						duration: 0.5,
+					}}
+					className="h-90 w-150 flex flex-col justify-self-center rounded-2xl shadow-black shadow-2xl"
+				>
 					<img src={Mirfeez} alt="" />
 					<h1 className="text-xl mt-5">
 						<span className="flex justify-self-center font-mono">
 							Portfolio Website
 						</span>
 					</h1>
-				</div>
+				</motion.div>
 				<Link to="/projects" className=" mt-2 cursor-pointer">
 					<span className="bg-purple-600 mt-5 featured-project justify-self-center flex px-2 py-1 rounded text-black">
 						View Projects

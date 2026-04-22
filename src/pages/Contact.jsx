@@ -1,16 +1,23 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Form from "./contact-page/Form";
+import { motion } from "motion/react";
 
 const Contact = () => {
-	
-
 	return (
 		<>
 			{/* <p className="text-6xl">*idg thel style add aakava /// </p> */}
 			<div className="contact-head grid md:grid-cols-3 gap-6 px-6 py-12 max-w-6xl mx-auto">
 				{/* Card 1 */}
-				<div
+				<motion.div
+					initial={{ x: -100, opacity: 0 }}
+					animate={{
+						x: 0,
+						opacity: 1,
+					}}
+					transition={{
+						duration: 0.1,
+					}}
 					className="bg-black/40 backdrop-blur-md border border-purple-500/20 rounded-2xl p-8 
   transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-900/20"
 				>
@@ -24,10 +31,18 @@ const Contact = () => {
 						you care about quality and performance, you're in the right
 						place.
 					</p>
-				</div>
+				</motion.div>
 
 				{/* Card 2 */}
-				<div
+				<motion.div
+					initial={{ x: 100, opacity: 0 }}
+					animate={{
+						x: 0,
+						opacity: 1,
+					}}
+					transition={{
+						duration: 0.1,
+					}}
 					className="bg-black/40 backdrop-blur-md border border-purple-500/20 rounded-2xl p-8 
   transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-900/20"
 				>
@@ -42,10 +57,18 @@ const Contact = () => {
 						</p>
 						<p>• If it's not, we'll tell you honestly — no ghosting</p>
 					</div>
-				</div>
+				</motion.div>
 
 				{/* Card 3 */}
-				<div
+				<motion.div
+					initial={{ x: -100, opacity: 0 }}
+					animate={{
+						x: 0,
+						opacity: 1,
+					}}
+					transition={{
+						duration: 0.1,
+					}}
 					className="before-reach bg-black/40 backdrop-blur-md border border-purple-500/20 rounded-2xl p-8 
   transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-900/20"
 				>
@@ -58,10 +81,20 @@ const Contact = () => {
 						<p>• Understand we focus on frontend work only</p>
 						<p>• Be open to focused scope and clear requirements</p>
 					</div>
-				</div>
+				</motion.div>
 			</div>
-
-			<Form />
+			<motion.div
+				initial={{ y: -50, opacity: 0 }}
+				animate={{
+					y: 0,
+					opacity: 1,
+				}}
+				transition={{
+					duration: 0.5,
+				}}
+			>
+				<Form />
+			</motion.div>
 		</>
 	);
 };
