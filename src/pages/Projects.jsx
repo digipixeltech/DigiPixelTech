@@ -4,11 +4,19 @@ import Mirfeez2026 from "../img/Projects/mirfeez-2026.png";
 import Interior from "../img/Projects/interior.png";
 import spicyRestaurent from "../img/Projects/spicy-restuarent.png";
 import Azeem from "../img/Projects/Portfolio.Azeem.png";
+import Azeemsigma from "../img/Projects/azeem-sigma.png";
 import loveCalc from "../img/Projects/love-calc.png";
 import { motion } from "motion/react";
 
 const Projects = () => {
 	const projectInfo = [
+		{
+			title: "Portfolio Website in 2026",
+			client: "Self",
+			img: Azeemsigma,
+			webLink: "https://azeem-sigma.vercel.app/",
+			info: "A React based portfolio using react-router-dom. tools like gsap, motion, emailjs were used here. trying to learn while doing more projects",
+		},
 		{
 			title: "Portfolio Website in 2026",
 			client: "Self",
