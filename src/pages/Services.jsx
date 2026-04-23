@@ -131,6 +131,7 @@ const Services = () => {
                     ease: "linear",
                     duration: 25,
                     repeat: Infinity,
+					delay: 0.7,
                   }}
 				//   whileHover={{
 				// 	x: 0,
