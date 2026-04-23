@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import Form from "./contact-page/Form";
 import { motion } from "motion/react";
 

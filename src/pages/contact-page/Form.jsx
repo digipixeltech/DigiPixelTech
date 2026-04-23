@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { ArrowDown } from "lucide-react";
-
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
 	
@@ -102,7 +102,7 @@ const Form = () => {
 
 					<button
 						type="submit"
-						className="bg-purple-600 hover:bg-purple-500 transition-all duration-300 py-3 rounded-xl font-semibold text-white shadow-lg"
+						className="bg-purple-600 hover:bg-purple-500 transition-all duration-300 py-3 rounded-xl cursor-pointer font-semibold text-white shadow-lg"
 					>
 						Send Message
 					</button>
